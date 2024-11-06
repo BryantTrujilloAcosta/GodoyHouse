@@ -1,0 +1,59 @@
+:root {
+    --margen: 2.188rem; 
+    --bordercolor:#D4AF37;
+    --inputcolor:#B3B3B3;
+}
+
+.img_index {
+    height: 16.938rem;
+    width: 100%;
+}
+body {
+    font-family: 'krub', sans-serif;
+    background-color: #F5F5F5;
+}
+
+main {
+    margin: var(--margen);
+}
+
+h1 {
+    font-size: 1.75rem;
+    margin: var(--margen);
+}
+h2 {
+    font-size:0.875rem;
+    font-weight: normal;
+}
+.cont-login{
+    font-size: 1.125rem;
+    font-weight: 600;
+    display: flex;
+    flex-direction: column;
+    -webkit-gap: 1rem;
+    gap: 1rem;
+}
+.cont-login label {
+    display: flex;   
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+}
+.cont-login input {
+    width: calc(100% - 2rem); 
+    height: 3.188rem;
+    border: 1px solid var(--bordercolor);
+    border-radius: 1rem;
+    border-width: .125rem;
+    padding: 0 1rem; 
+}
+.enviar {
+    background: rgb(212,175,55);
+    background: linear-gradient(90deg, rgba(212,175,55,1) 0%, rgba(170,143,72,1) 100%);
+    color: white;
+    margin-top: 3rem;
+    font-weight: bold;
+    cursor: pointer;
+    margin-left: .8rem;
+}
+
+
