@@ -81,7 +81,6 @@ al,ul {
     cursor: pointer;
     margin: auto;
     text-align: center;
-    border-bottom:  solid 1px #1A1A1A;
 
 }
 .list_icon{
@@ -130,6 +129,23 @@ al,ul {
 }
 
 
-
+@media  (min-width:768px){
+    .label_hamburguesa{
+        display: none;
+    }
+    .menu_hamburguesa:checked + .ul_links{
+        height: auto;
+    }
+    .ul_links{
+        width: auto;
+        height: auto;
+        background-color: transparent;
+        display: flex;
+        margin: var(--margen);
+    }
+    .li_links{
+        margin: 0 1rem;
+    }
+}
 
 
