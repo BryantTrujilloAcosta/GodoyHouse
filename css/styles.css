@@ -111,10 +111,10 @@ footer{
     flex-direction: column;
     justify-content:space-between ;
     transition: all 0.5s;
-    overflow-y: none;
 }
 .menu_hamburguesa:checked ~ .ul_links{
     height: calc(100vh - var(--margen));
+    
 }
 .li_links{
     cursor: pointer;
