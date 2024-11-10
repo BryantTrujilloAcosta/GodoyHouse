@@ -64,14 +64,12 @@ footer{
     margin:0;
     background-color: #F5F5F5;
     flex-wrap: wrap;
-    overflow-y: auto;
 }
 .menu_hamburguesa{
     display: none;
 }
 .menu_hamburguesa:checked + .ul_links{
     height: calc(100vh - var(--margen));
-    overflow-y: auto;
 }
 .ul_links{
     background-color:#D9D9D9 ;
