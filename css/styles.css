@@ -111,6 +111,7 @@ footer{
     flex-direction: column;
     justify-content:space-between ;
     transition: all 0.5s;
+    overflow-y: auto;
 }
 .menu_hamburguesa:checked ~ .ul_links{
     height: calc(100vh - var(--margen));
@@ -188,7 +189,7 @@ footer{
 }
 .cont_buscar select{
     border-radius: 0.625rem;
-    color: #858585;
+    color: #222222;
     background-color: #c5c5c5;
     width: 17.188rem;
     height: 3.813rem;
@@ -214,6 +215,34 @@ footer{
 
 
 @media  (min-width:768px){
+
+    /* estilos para pantallas de 768px en adelante */
+    /* estilos de index */
+    .img_index {
+        display: none;
+    }
+    .title_indx{
+        display: none;
+    }
+    .body_indx{
+        background: #ffe259;  /* fallback for old browsers */
+        background: -webkit-linear-gradient(to right, #ffa751, #ffe259);  /* Chrome 10-25, Safari 5.1-6 */
+        background: linear-gradient(to right, #ffa751, #ffe259); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+    }
+    .cont-form{
+        width: 50%;
+        text-align: center;
+        margin: 10rem auto;
+        border-radius: 1rem;
+        border: solid 5px var(--bordercolor);
+        box-shadow: #402c1e 0 0 1rem;
+        padding: 5rem;
+        background-color: #F5F5F5;
+    }
+    .cont-form input[type="submit"]:hover{ 
+        color: #1A1A1A;
+    }
     .label_hamburguesa{
         display: none;
     }
@@ -226,7 +255,9 @@ footer{
         background-color: transparent;
         display: flex;
         margin: var(--margen);
+        display: flex;
         flex-direction: row;
+        
         
     }
     .li_links{
@@ -236,6 +267,36 @@ footer{
     }
     .menu_button{
         display: none;
+    }
+    .inicio_fondo{
+        margin-top: 10rem;
+        height: 100vh;
+        width: 50%;
+        
+    }
+    .cont_buscar{
+        margin-left: 100%;
+        width: 100%;
+        background: #64452b;
+        
+    }
+    .title_inicio{
+        color: #F5F5F5;
+    }
+    .cont_buscar select{
+        background-color: #cccccc;
+        margin-top: 1rem;
+    }
+    .cont_buscar select:hover{
+        background-color: #b3b3b3;
+    }
+
+    .cont_buscar input[type="submit"]{
+        background: #402c1e;
+        margin-top: 3rem;
+    }
+    #buscar:hover{
+        background: #664427;
     }
 }
 
