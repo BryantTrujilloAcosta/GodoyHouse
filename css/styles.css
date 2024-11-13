@@ -38,10 +38,9 @@ a:hover {
 al,ul {
     list-style: none;
 }
-footer{
-    border-top: solid 1px #B3B3B3;
+.error{
     text-align: center;
-    font-size: small;
+    color: red;
 }
 .titulo h1{
     font-family: poppins , sans-serif;

@@ -1,5 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
+<?php
+    include("conexion.php");
+?>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -19,7 +22,22 @@
     <main>
         <div class="cont-form">
             <h2>Date de alta llenando los siguientes datos.</h2>
-            <form action="index.html" method="#" class="form">
+            <form action="Registrar.php" method="post" class="form">
+            <?php
+                    //mostrar mensaje de exito
+                    if(isset($_GET['exito'])&& $_GET['exito']==true){
+                        echo "<p style= 'color:green; text-align=center;'>Registro éxitoso.</p>";
+                    }
+                    if(isset($_GET['error'])){
+                    ?>
+                    <p class="error">
+                     <?php
+                        echo $_GET['error']
+                    ?>
+                    </p>
+                    <?php
+                    }
+                ?>
                 <label for="nombre">Nombre</label>
                 <input type="text" name="nombre" id="nombre" placeholder="Ingresa nombre" required>
                 
@@ -27,19 +45,18 @@
                 <input type="text" name="apellido" id="apellido" placeholder="Ingresa apellido" required>
 
                 <label for="celular">Celular</label>
-                <input type="tel" name="celular" id="celular" placeholder="Ingresa celular" required>
+                <input type="tel" name="celular" id="celular" placeholder="Ingresa celular" required maxlength="10">
 
-                <label for="correo">Correo</label>
-                <input type="email" name="correo" id="correo" placeholder="Ingresa correo" required>
+                <label for="email">Correo</label>
+                <input type="email" name="email" id="email" placeholder="Ingresa correo" required>
                 
-                <label forntraseña">Contraseña</label>
-                <input type="password" name="contraseña" id="contraseña" placeholder="Ingresa contraseña" required>
+                <label for ="password">Contraseña</label>
+                <input type="password" name="password" id="password" placeholder="Ingresa contraseña" required>
                 
                 <input type="submit" value="Crear Cuenta" class="enviar">
             </form>
+            <h2 class="login-prompt">¿Ya tienes cuenta?<a href="index.php"><b>Inicia sesión</b></a></h2>
         </div>
-        <h2 class="login-prompt">¿Ya tienes cuenta?<a href="index.html"><b>Inicia sesión</b></a></h2>
     </main>
-    <footer> <p>&copy; 2024 Godoy'sHouse. Todos los derechos reservados.</p></footer>
 </body>
 </html>

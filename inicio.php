@@ -37,7 +37,7 @@
                     <a href="#">Publicar gratis</a>
                 </li>
                 <li class="li_links">
-                    <a href="index.html">Cerrar sesión</a>
+                    <a href="CerrarSesion.php">Cerrar sesión</a>
                 </li>
             </ul>
         </nav>
@@ -87,6 +87,5 @@
             </div>
         </div>
     </main>
-    <footer><p>&copy; 2024 Godoy'sHouse. Todos los derechos reservados.</p></footer>
 </body>
 </html>

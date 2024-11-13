@@ -1,5 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
+    <?php
+    include("conexion.php");
+    ?>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -20,18 +23,28 @@
     <main>
         <div class="cont-form">
             <h2>Inicia sesión con tu cuenta de <b>GodoyHouse.</b></h2>
-            <form action="inicio.html" method="#" class="form">
+            <form action="autenticacion.php" method="POST" class="form">
                 <label for="email">Correo</label>
-                <input type="email" name="email" id="email" placeholder="Correo electrónico" required>
+                <input type="email" name="email" id="email" placeholder="Correo electrónico" >
                 
                 <label for="password">Contraseña</label>
-                <input type="password" name="password" id="password" placeholder="Contraseña" required>
+                <input type="password" name="password" id="password" placeholder="Contraseña" >
                 
-                <input type="submit" value="Inicia sesión" class="enviar">
+                <input type="submit" name = "login" value="Inicia sesión" class="enviar">
             </form>
-            <h2 class="login-prompt">¿No tienes cuenta?<a href="Registro.html"><b>Registrate.</b></a></h2>
+            <?php
+                    if(isset($_GET['error'])){
+                    ?>
+                    <p class="error">
+                        <?php
+                        echo $_GET['error']
+                        ?>
+                    </p>
+                <?php    
+                    }
+                ?>
+            <h2 class="login-prompt">¿No tienes cuenta?<a href="Registro.php"><b>Registrate.</b></a></h2>
         </div>
     </main>
-    <footer class="pie_indx"><p>&copy; 2024 Godoy'sHouse. Todos los derechos reservados.</p></footer>
 </body>
 </html>
